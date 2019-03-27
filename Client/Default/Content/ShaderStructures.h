@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-namespace DX12UWP
+namespace Client
 {
 	// MVP 매트릭스를 꼭짓점 셰이더로 보내는 데 사용되는 상수 버퍼입니다.
 	struct ModelViewProjectionConstantBuffer

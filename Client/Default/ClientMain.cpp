@@ -1,8 +1,8 @@
 #include "pch.h"
-#include "DX12UWPMain.h"
-#include "Common\DirectXHelper.h"
+#include "ClientMain.h"
+#include "DirectXHelper.h"
 
-using namespace DX12UWP;
+using namespace Client;
 using namespace Windows::Foundation;
 using namespace Windows::System::Threading;
 using namespace Concurrency;
@@ -10,7 +10,7 @@ using namespace Concurrency;
 // DirectX 12 응용 프로그램 템플릿에 대한 설명은 https://go.microsoft.com/fwlink/?LinkID=613670&clcid=0x412에 나와 있습니다.
 
 // 응용 프로그램이 로드되면 응용 프로그램 자산을 로드하고 초기화합니다.
-DX12UWPMain::DX12UWPMain()
+ClientMain::ClientMain()
 {
 	// TODO: 기본 가변 timestep 모드 외에 다른 설정을 하려면 타이머 설정을 변경합니다.
 	// 예: 60FPS 고정 timestep 업데이트 논리일 경우 다음을 호출합니다.
@@ -21,7 +21,7 @@ DX12UWPMain::DX12UWPMain()
 }
 
 // 렌더러를 만들고 초기화합니다.
-void DX12UWPMain::CreateRenderers(const std::shared_ptr<DX::DeviceResources>& deviceResources)
+void ClientMain::CreateRenderers(const std::shared_ptr<DX::DeviceResources>& deviceResources)
 {
 	// TODO: 이 항목을 앱 콘텐츠 초기화로 대체합니다.
 	m_sceneRenderer = std::unique_ptr<Sample3DSceneRenderer>(new Sample3DSceneRenderer(deviceResources));
@@ -30,7 +30,7 @@ void DX12UWPMain::CreateRenderers(const std::shared_ptr<DX::DeviceResources>& de
 }
 
 // 프레임당 한 번 응용 프로그램 상태를 업데이트합니다.
-void DX12UWPMain::Update()
+void ClientMain::Update()
 {
 	// 장면 개체를 업데이트합니다.
 	m_timer.Tick([&]()
@@ -42,7 +42,7 @@ void DX12UWPMain::Update()
 
 // 현재 응용 프로그램 상태에 따라 현재 프레임을 렌더링합니다.
 // 프레임이 렌더링되어 표시할 준비가 되면 true를 반환합니다.
-bool DX12UWPMain::Render()
+bool ClientMain::Render()
 {
 	// 처음 업데이트하기 전에 아무것도 렌더링하지 마세요.
 	if (m_timer.GetFrameCount() == 0)
@@ -56,14 +56,14 @@ bool DX12UWPMain::Render()
 }
 
 // 창의 크기가 변하면(예: 장치 방향 변경) 응용 프로그램 상태를 업데이트합니다.
-void DX12UWPMain::OnWindowSizeChanged()
+void ClientMain::OnWindowSizeChanged()
 {
 	// TODO: 이 항목을 앱 콘텐츠의 크기 종속 초기화로 대체합니다.
 	m_sceneRenderer->CreateWindowSizeDependentResources();
 }
 
 // 일시 중단 상태가 아닌 앱을 알려 줍니다.
-void DX12UWPMain::OnSuspending()
+void ClientMain::OnSuspending()
 {
 	// TODO: 이것을 앱의 일시 중단 논리로 바꾸세요.
 
@@ -77,13 +77,13 @@ void DX12UWPMain::OnSuspending()
 }
 
 // 더 이상 일시 중단 상태가 아닌 앱을 알려 줍니다.
-void DX12UWPMain::OnResuming()
+void ClientMain::OnResuming()
 {
 	// TODO: 이것을 앱의 다시 시작 논리로 바꾸세요.
 }
 
 // 릴리스가 필요한 장치 리소스를 렌더러에 알립니다.
-void DX12UWPMain::OnDeviceRemoved()
+void ClientMain::OnDeviceRemoved()
 {
 	// TODO: 필요한 응용 프로그램 또는 렌더러 상태를 저장하고 렌더러를 릴리스하세요.
 	// 및 더 이상 유효하지 않은 리소스입니다.

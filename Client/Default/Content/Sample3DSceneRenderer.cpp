@@ -5,7 +5,7 @@
 #include <ppltasks.h>
 #include <synchapi.h>
 
-using namespace DX12UWP;
+using namespace Client;
 
 using namespace Concurrency;
 using namespace DirectX;

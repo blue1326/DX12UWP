@@ -4,7 +4,7 @@
 #include "ShaderStructures.h"
 #include "..\Common\StepTimer.h"
 
-namespace DX12UWP
+namespace Client
 {
 	// 이 샘플 렌더러는 기본 렌더링 파이프라인을 인스턴스화합니다.
 	class Sample3DSceneRenderer

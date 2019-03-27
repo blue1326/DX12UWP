@@ -1,16 +1,16 @@
 ﻿#pragma once
 
-#include "Common\StepTimer.h"
-#include "Common\DeviceResources.h"
-#include "Content\Sample3DSceneRenderer.h"
+#include "StepTimer.h"
+#include "DeviceResources.h"
+#include "Sample3DSceneRenderer.h"
 
 // 화면에서 Direct3D 콘텐츠를 렌더링합니다.
-namespace DX12UWP
+namespace Client
 {
-	class DX12UWPMain
+	class ClientMain
 	{
 	public:
-		DX12UWPMain();
+		ClientMain();
 		void CreateRenderers(const std::shared_ptr<DX::DeviceResources>& deviceResources);
 		void Update();
 		bool Render();

@@ -3,7 +3,7 @@
 
 #include <ppltasks.h>
 
-using namespace DX12UWP;
+using namespace Client;
 
 using namespace concurrency;
 using namespace Windows::ApplicationModel;
@@ -20,13 +20,13 @@ using Microsoft::WRL::ComPtr;
 // DirectX 12 응용 프로그램 템플릿에 대한 설명은 https://go.microsoft.com/fwlink/?LinkID=613670&clcid=0x412에 나와 있습니다.
 
 // main 함수는 IFrameworkView 클래스 초기화에만 사용됩니다.
-[Platform::MTAThread]
-int main(Platform::Array<Platform::String^>^)
-{
-	auto direct3DApplicationSource = ref new Direct3DApplicationSource();
-	CoreApplication::Run(direct3DApplicationSource);
-	return 0;
-}
+//[Platform::MTAThread]
+//int main(Platform::Array<Platform::String^>^)
+//{
+//	auto direct3DApplicationSource = ref new Direct3DApplicationSource();
+//	CoreApplication::Run(direct3DApplicationSource);
+//	return 0;
+//}
 
 IFrameworkView^ Direct3DApplicationSource::CreateView()
 {
@@ -83,7 +83,7 @@ void App::Load(Platform::String^ entryPoint)
 {
 	if (m_main == nullptr)
 	{
-		m_main = std::unique_ptr<DX12UWPMain>(new DX12UWPMain());
+		m_main = std::unique_ptr<ClientMain>(new ClientMain());
 	}
 }
 

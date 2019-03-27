@@ -1,10 +1,10 @@
 ﻿#pragma once
 
 #include "pch.h"
-#include "Common\DeviceResources.h"
-#include "DX12UWPMain.h"
+#include "DeviceResources.h"
+#include "ClientMain.h"
 
-namespace DX12UWP
+namespace Client
 {
 	// 응용 프로그램의 주 진입점입니다. 응용 프로그램을 Windows 셸과 연결하고 응용 프로그램 수명 주기 이벤트를 처리합니다.
 	ref class App sealed : public Windows::ApplicationModel::Core::IFrameworkView
@@ -40,7 +40,7 @@ namespace DX12UWP
 		std::shared_ptr<DX::DeviceResources> GetDeviceResources();
 
 		std::shared_ptr<DX::DeviceResources> m_deviceResources;
-		std::unique_ptr<DX12UWPMain> m_main;
+		std::unique_ptr<ClientMain> m_main;
 		bool m_windowClosed;
 		bool m_windowVisible;
 	};

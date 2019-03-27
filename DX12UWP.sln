@@ -3,7 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DX12UWP", "DX12UWP\DX12UWP.vcxproj", "{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Default\Client.vcxproj", "{37492E03-EB63-4604-A6A2-28D6B69A47F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{7AF22162-790A-40A4-9736-18004E74672F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samplecode", "Samplecode", "{B64B4E04-6EBE-49E1-B406-AEBDED733DC8}"
+	ProjectSection(SolutionItems) = preProject
+		Client\Default\App.cpp = Client\Default\App.cpp
+		Client\Default\App.h = Client\Default\App.h
+		Client\Default\ClientMain.cpp = Client\Default\ClientMain.cpp
+		Client\Default\ClientMain.h = Client\Default\ClientMain.h
+		Client\Default\Content\Sample3DSceneRenderer.cpp = Client\Default\Content\Sample3DSceneRenderer.cpp
+		Client\Default\Content\Sample3DSceneRenderer.h = Client\Default\Content\Sample3DSceneRenderer.h
+		Client\Default\Content\SamplePixelShader.hlsl = Client\Default\Content\SamplePixelShader.hlsl
+		Client\Default\Content\SampleVertexShader.hlsl = Client\Default\Content\SampleVertexShader.hlsl
+		Client\Default\Content\ShaderStructures.h = Client\Default\Content\ShaderStructures.h
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,33 +32,36 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|ARM.ActiveCfg = Debug|ARM
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|ARM.Build.0 = Debug|ARM
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|ARM.Deploy.0 = Debug|ARM
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|ARM64.Build.0 = Debug|ARM64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|ARM64.Deploy.0 = Debug|ARM64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|x64.ActiveCfg = Debug|x64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|x64.Build.0 = Debug|x64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|x64.Deploy.0 = Debug|x64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|x86.ActiveCfg = Debug|Win32
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|x86.Build.0 = Debug|Win32
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Debug|x86.Deploy.0 = Debug|Win32
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|ARM.ActiveCfg = Release|ARM
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|ARM.Build.0 = Release|ARM
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|ARM.Deploy.0 = Release|ARM
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|ARM64.ActiveCfg = Release|ARM64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|ARM64.Build.0 = Release|ARM64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|ARM64.Deploy.0 = Release|ARM64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|x64.ActiveCfg = Release|x64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|x64.Build.0 = Release|x64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|x64.Deploy.0 = Release|x64
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|x86.ActiveCfg = Release|Win32
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|x86.Build.0 = Release|Win32
-		{87F2FDDC-D393-4DB0-91DA-AAC2179BB53C}.Release|x86.Deploy.0 = Release|Win32
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|ARM.Build.0 = Debug|ARM
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|ARM.Deploy.0 = Debug|ARM
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|ARM64.Build.0 = Debug|ARM64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|x64.ActiveCfg = Debug|x64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|x64.Build.0 = Debug|x64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|x64.Deploy.0 = Debug|x64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|x86.ActiveCfg = Debug|Win32
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|x86.Build.0 = Debug|Win32
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Debug|x86.Deploy.0 = Debug|Win32
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|ARM.ActiveCfg = Release|ARM
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|ARM.Build.0 = Release|ARM
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|ARM.Deploy.0 = Release|ARM
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|ARM64.ActiveCfg = Release|ARM64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|ARM64.Build.0 = Release|ARM64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|ARM64.Deploy.0 = Release|ARM64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|x64.ActiveCfg = Release|x64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|x64.Build.0 = Release|x64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|x64.Deploy.0 = Release|x64
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|x86.ActiveCfg = Release|Win32
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|x86.Build.0 = Release|Win32
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37492E03-EB63-4604-A6A2-28D6B69A47F5} = {7AF22162-790A-40A4-9736-18004E74672F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C62FE08-85F6-40A6-8725-5E693D974CC1}
