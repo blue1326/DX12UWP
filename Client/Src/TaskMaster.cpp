@@ -23,14 +23,13 @@ CTaskMaster::~CTaskMaster()
 
 void CTaskMaster::Initialize()
 {
-	
 	for (int i = 0; i < TL_MAXCOUNT; i++)
 	{
 		for (int j = 0; j < TC_MAXCOUNT; j++)
 		{
 			m_Thread[i][j] = make_unique<thread>([&,i,j]() 
 			{
-				x[i][j] = 0;
+				//x[i][j] = 0;//testcode
 				while (isRunning)
 				{
 					unique_lock<mutex> lock(mtx[i]);
@@ -43,6 +42,11 @@ void CTaskMaster::Initialize()
 			});
 		}
 	}
+	
 
+}
 
+bool CTaskMaster::AddTask()
+{
+	return false;
 }

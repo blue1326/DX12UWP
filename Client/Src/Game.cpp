@@ -118,7 +118,7 @@ void CGame::Render()
 	//present
 	PIXBeginEvent(m_deviceResources->GetCommandQueue(), PIX_COLOR_DEFAULT, L"Present");
 	m_deviceResources->Present();
-	
+	m_graphicsMemory->Commit(m_deviceResources->GetCommandQueue());
 	PIXEndEvent(m_deviceResources->GetCommandQueue());
 
 }
@@ -147,7 +147,9 @@ void CGame::Clear()
 
 void CGame::CreateDeviceDependentResources()
 {
+	auto device = m_deviceResources->GetD3DDevice();
 
+	m_graphicsMemory = std::make_unique<GraphicsMemory>(device);
 }
 
 void CGame::CreateWindowSizeDependentResources()

@@ -44,6 +44,9 @@
     <Filter Include="98.TaskMaster">
       <UniqueIdentifier>{be498446-2269-4b2d-a896-2e7fe2aae44a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97.FbxLoader">
+      <UniqueIdentifier>{604f9c2a-5bfb-4f1f-872b-ddee051d50ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -64,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="..\Src\ThreadPool.cpp">
       <Filter>98.TaskMaster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\FbxLoader.cpp">
+      <Filter>97.FbxLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="..\Src\ThreadPool.h">
       <Filter>98.TaskMaster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\FbxLoader.h">
+      <Filter>97.FbxLoader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

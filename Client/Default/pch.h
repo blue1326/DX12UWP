@@ -26,6 +26,33 @@
 #include <dxgidebug.h>
 #endif
 
+//directxtk
+#include "Audio.h"
+#include "CommonStates.h"
+#include "DirectXHelpers.h"
+#include "DDSTextureLoader.h"
+#include "DescriptorHeap.h"
+#include "Effects.h"
+#include "GamePad.h"
+#include "GeometricPrimitive.h"
+#include "GraphicsMemory.h"
+#include "Keyboard.h"
+#include "Model.h"
+#include "Mouse.h"
+#include "PrimitiveBatch.h"
+#include "ResourceUploadBatch.h"
+#include "RenderTargetState.h"
+#include "SimpleMath.h"
+#include "SpriteBatch.h"
+#include "SpriteFont.h" 
+#include "VertexTypes.h"
+
+//fbxsdk
+#pragma comment(lib,"libfbxsdk-md.lib")
+#pragma comment(lib,"libxml2-md.lib")
+#pragma comment(lib,"zlib-md.lib")
+#include "fbxsdk.h"
+
 using namespace std;
 
 
